@@ -1,0 +1,14 @@
+{
+  "metrics_jsonl": "/Users/moin/maat/milestones_preview/charts/run_555m/train_metrics_555m.jsonl",
+  "rows": 739,
+  "last_step": 541994,
+  "last_samples": 555000000,
+  "finite_val_points": 15,
+  "nan_val_rows": 724,
+  "outputs": [
+    "run555_train_loss_raw_vs_ema.png",
+    "run555_val_loss_eval_only.png",
+    "run555_throughput_raw_vs_ema.png",
+    "run555_clean_dashboard.png"
+  ]
+}
