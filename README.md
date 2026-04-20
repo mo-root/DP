@@ -37,61 +37,97 @@ This is why the README emphasizes milestone media rather than only static docume
 
 ## Visual Milestones
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>1. Data Collection</h3>
-      <a href="milestones_preview/data_collection/raw_episode_s3_20s.mp4">
-        <img src="assets/readme/data_collection_preview.png" alt="Data collection preview strip" />
-      </a>
-      <p>Three dataset lineages were built to improve coverage, diversity, and hard-contact collision behavior.</p>
-      <p>
-        <a href="milestones_preview/data_collection/raw_episode_s3_20s.mp4">Raw episode video</a><br/>
-        <a href="milestones_preview/data_collection/generated_episode_20s.mp4">Generated episode video</a><br/>
-        <a href="milestones_preview/charts/data_collection_scale_frames_millions.png">Dataset scale chart</a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>2. VAE Latent Compression</h3>
-      <a href="milestones_preview/vae/vae_latent_compare_ep0_13s.mp4">
-        <img src="assets/readme/vae_latent_compare.gif" alt="VAE latent comparison" />
-      </a>
-      <p>The VAE stage compresses frames into a compact latent space while preserving enough information for world-model training and rollout decoding.</p>
-      <p>
-        <a href="milestones_preview/vae/vae_preview_60m_8s.mp4">Reconstruction video</a><br/>
-        <a href="milestones_preview/vae/vae_latent_compare_ep0_13s.mp4">Latent comparison video</a><br/>
-        <a href="milestones_preview/vae/vae_preview_grid_60m.png">Static reconstruction grid</a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>3. World Model Rollouts</h3>
-      <a href="milestones_preview/world_model/checkpoint_progression/checkpoint_progression_686m_to_1521m_8s.mp4">
-        <img src="assets/readme/latest_rollout.gif" alt="Latest rollout preview" />
-      </a>
-      <p>The milestone package includes baseline-vs-DF comparisons, checkpoint progression, DDIM step tradeoffs, and longer-horizon rollouts.</p>
-      <p>
-        <a href="milestones_preview/world_model/baseline_vs_df/ctx8_baseline_vs_dfv0_8s.mp4">Baseline vs diffusion forcing</a><br/>
-        <a href="milestones_preview/world_model/checkpoint_progression/checkpoint_progression_686m_to_1521m_8s.mp4">Checkpoint progression</a><br/>
-        <a href="milestones_preview/world_model/long_rollout/long_rollout_h128_10s.mp4">Long rollout</a><br/>
-        <a href="milestones_preview/world_model/ddim_steps_comparison/ddim_steps_1x4_8s.mp4">DDIM comparison</a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>4. Distillation Preview</h3>
-      <a href="milestones_preview/final_project_media/distill_20260304/rollout_compare_clip_000.mp4">
-        <img src="assets/readme/distillation_compare.gif" alt="Teacher and student rollout comparison" />
-      </a>
-      <p>A teacher-student distillation branch is included for lower-latency interactive inference while trying to preserve rollout quality.</p>
-      <p>
-        <a href="milestones_preview/final_project_media/distill_20260304/preview_teacher_clip_000.mp4">Teacher preview</a><br/>
-        <a href="milestones_preview/final_project_media/distill_20260304/preview_student_clip_000.mp4">Student preview</a><br/>
-        <a href="milestones_preview/final_project_media/distill_20260304/rollout_compare_clip_000.mp4">Teacher vs student comparison</a>
-      </p>
-    </td>
-  </tr>
-</table>
+This README now shows the milestone sequence directly. Folder names are used as the structure so the project can be followed step by step from the root page.
+
+### `milestones_preview/data_collection/`
+
+<p align="center">
+  <img src="assets/readme/data_collection_preview.png" alt="Data collection preview strip" width="85%" />
+</p>
+
+Raw data generation previews and dataset-scale artifacts.
+Files shown in this stage: `raw_episode_s3_20s.mp4`, `generated_episode_20s.mp4`, `raw_preview_strip_ep0.png`.
+
+### `milestones_preview/vae/`
+
+<p align="center">
+  <img src="assets/readme/vae_latent_compare.gif" alt="VAE latent comparison" width="85%" />
+</p>
+
+VAE reconstruction quality and latent-space comparison.
+Files shown in this stage: `vae_preview_60m_8s.mp4`, `vae_latent_compare_ep0_13s.mp4`, `vae_preview_grid_60m.png`.
+
+### `milestones_preview/world_model/`
+
+<p align="center">
+  <img src="assets/readme/world_model_clip_000.gif" alt="World model rollout clip" width="85%" />
+</p>
+
+General world-model rollout previews.
+Files shown in this stage: `clip_000.mp4`, `clip_001.mp4`, `good-collusion example.mp4`.
+
+### `milestones_preview/world_model/baseline_vs_df/`
+
+<p align="center">
+  <img src="assets/readme/baseline_vs_df.gif" alt="Baseline vs diffusion forcing" width="85%" />
+</p>
+
+Direct baseline versus diffusion-forcing comparison.
+File shown in this stage: `ctx8_baseline_vs_dfv0_8s.mp4`.
+
+### `milestones_preview/world_model/checkpoint_progression/`
+
+<p align="center">
+  <img src="assets/readme/checkpoint_progression.gif" alt="Checkpoint progression" width="85%" />
+</p>
+
+Progression from 686M through later checkpoints and resume training.
+Files shown in this stage: `checkpoint_progression_686m_to_1521m_8s.mp4`, `joint_686m_final_8s.mp4`, `joint_1521m_final_8s.mp4`, `joint_1521m_resume360_8s.mp4`.
+
+### `milestones_preview/world_model/ddim_steps_comparison/`
+
+<p align="center">
+  <img src="assets/readme/ddim_steps_compare.gif" alt="DDIM steps comparison" width="85%" />
+</p>
+
+Inference tradeoff comparison across DDIM step counts.
+Files shown in this stage: `ddim08_8s.mp4`, `ddim12_8s.mp4`, `ddim20_8s.mp4`, `ddim30_8s.mp4`, `ddim_steps_1x4_8s.mp4`, `ddim_steps_2x2_8s.mp4`.
+
+### `milestones_preview/world_model/long_rollout/`
+
+<p align="center">
+  <img src="assets/readme/long_rollout.gif" alt="Long rollout preview" width="85%" />
+</p>
+
+Long-horizon stability preview.
+File shown in this stage: `long_rollout_h128_10s.mp4`.
+
+### `milestones_preview/latest_resume555m_preview_20260303/`
+
+<p align="center">
+  <img src="assets/readme/latest_resume555m_clip_002_preview.gif" alt="Latest resume preview" width="85%" />
+</p>
+
+Latest resume rollout clips.
+Files shown in this stage: `clip_000.mp4`, `clip_001.mp4`, `clip_002.mp4`.
+
+### `milestones_preview/final_project_media/distill_20260304/`
+
+<p align="center">
+  <img src="assets/readme/distillation_compare.gif" alt="Teacher student distillation comparison" width="85%" />
+</p>
+
+Teacher-student distillation preview and comparison.
+Files shown in this stage: `preview_teacher_clip_000.mp4`, `preview_student_clip_000.mp4`, `rollout_compare_clip_000.mp4`.
+
+### `milestones_preview/gifs for esasy/`
+
+<p align="center">
+  <img src="milestones_preview/gifs%20for%20esasy/vae_latent_compare_ep0_13s.gif" alt="Essay VAE gif" width="48%" />
+  <img src="milestones_preview/gifs%20for%20esasy/latest_resume555m_clip_002.gif" alt="Essay rollout gif" width="48%" />
+</p>
+
+Small GIF previews prepared for the paper and slide deck.
 
 ## Metric Snapshots
 
@@ -102,80 +138,6 @@ This is why the README emphasizes milestone media rather than only static docume
 
 - Full charts directory: [`milestones_preview/charts/`](milestones_preview/charts/README.md)
 - Full world-model media bundle: [`milestones_preview/world_model/`](milestones_preview/world_model/README.md)
-
-## Step-by-Step Media Index
-
-This section mirrors the actual `milestones_preview/` folder layout so someone browsing the repo can follow the project in sequence.
-
-### `milestones_preview/data_collection/`
-
-- [`raw_episode_s3_20s.mp4`](milestones_preview/data_collection/raw_episode_s3_20s.mp4)
-- [`generated_episode_20s.mp4`](milestones_preview/data_collection/generated_episode_20s.mp4)
-- [`raw_preview_strip_ep0.png`](milestones_preview/data_collection/raw_preview_strip_ep0.png)
-- Folder notes: [`README.md`](milestones_preview/data_collection/README.md)
-
-### `milestones_preview/vae/`
-
-- [`vae_preview_60m_8s.mp4`](milestones_preview/vae/vae_preview_60m_8s.mp4)
-- [`vae_latent_compare_ep0_13s.mp4`](milestones_preview/vae/vae_latent_compare_ep0_13s.mp4)
-- [`vae_preview_grid_60m.png`](milestones_preview/vae/vae_preview_grid_60m.png)
-- Folder notes: [`README.md`](milestones_preview/vae/README.md)
-
-### `milestones_preview/world_model/`
-
-- [`clip_000.mp4`](milestones_preview/world_model/clip_000.mp4)
-- [`clip_001.mp4`](milestones_preview/world_model/clip_001.mp4)
-- [`good-collusion example.mp4`](milestones_preview/world_model/good-collusion%20example.mp4)
-- Folder notes: [`README.md`](milestones_preview/world_model/README.md)
-
-### `milestones_preview/world_model/baseline_vs_df/`
-
-- [`ctx8_baseline_vs_dfv0_8s.mp4`](milestones_preview/world_model/baseline_vs_df/ctx8_baseline_vs_dfv0_8s.mp4)
-- Folder notes: [`README.md`](milestones_preview/world_model/baseline_vs_df/README.md)
-
-### `milestones_preview/world_model/checkpoint_progression/`
-
-- [`checkpoint_progression_686m_to_1521m_8s.mp4`](milestones_preview/world_model/checkpoint_progression/checkpoint_progression_686m_to_1521m_8s.mp4)
-- [`joint_686m_final_8s.mp4`](milestones_preview/world_model/checkpoint_progression/joint_686m_final_8s.mp4)
-- [`joint_1521m_final_8s.mp4`](milestones_preview/world_model/checkpoint_progression/joint_1521m_final_8s.mp4)
-- [`joint_1521m_resume360_8s.mp4`](milestones_preview/world_model/checkpoint_progression/joint_1521m_resume360_8s.mp4)
-- Folder notes: [`README.md`](milestones_preview/world_model/checkpoint_progression/README.md)
-
-### `milestones_preview/world_model/ddim_steps_comparison/`
-
-- [`ddim08_8s.mp4`](milestones_preview/world_model/ddim_steps_comparison/ddim08_8s.mp4)
-- [`ddim12_8s.mp4`](milestones_preview/world_model/ddim_steps_comparison/ddim12_8s.mp4)
-- [`ddim20_8s.mp4`](milestones_preview/world_model/ddim_steps_comparison/ddim20_8s.mp4)
-- [`ddim30_8s.mp4`](milestones_preview/world_model/ddim_steps_comparison/ddim30_8s.mp4)
-- [`ddim_steps_1x4_8s.mp4`](milestones_preview/world_model/ddim_steps_comparison/ddim_steps_1x4_8s.mp4)
-- [`ddim_steps_2x2_8s.mp4`](milestones_preview/world_model/ddim_steps_comparison/ddim_steps_2x2_8s.mp4)
-- [`actions_timeline.png`](milestones_preview/world_model/ddim_steps_comparison/actions_timeline.png)
-- Folder notes: [`README.md`](milestones_preview/world_model/ddim_steps_comparison/README.md)
-
-### `milestones_preview/world_model/long_rollout/`
-
-- [`long_rollout_h128_10s.mp4`](milestones_preview/world_model/long_rollout/long_rollout_h128_10s.mp4)
-- Folder notes: [`README.md`](milestones_preview/world_model/long_rollout/README.md)
-
-### `milestones_preview/latest_resume555m_preview_20260303/`
-
-- [`clip_000.mp4`](milestones_preview/latest_resume555m_preview_20260303/clip_000.mp4)
-- [`clip_001.mp4`](milestones_preview/latest_resume555m_preview_20260303/clip_001.mp4)
-- [`clip_002.mp4`](milestones_preview/latest_resume555m_preview_20260303/clip_002.mp4)
-
-### `milestones_preview/final_project_media/distill_20260304/`
-
-- [`preview_teacher_clip_000.mp4`](milestones_preview/final_project_media/distill_20260304/preview_teacher_clip_000.mp4)
-- [`preview_student_clip_000.mp4`](milestones_preview/final_project_media/distill_20260304/preview_student_clip_000.mp4)
-- [`rollout_compare_clip_000.mp4`](milestones_preview/final_project_media/distill_20260304/rollout_compare_clip_000.mp4)
-- [`preview_teacher_clip_000.gif`](milestones_preview/final_project_media/distill_20260304/preview_teacher_clip_000.gif)
-- [`preview_student_clip_000.gif`](milestones_preview/final_project_media/distill_20260304/preview_student_clip_000.gif)
-- [`rollout_compare_clip_000.gif`](milestones_preview/final_project_media/distill_20260304/rollout_compare_clip_000.gif)
-
-### `milestones_preview/gifs for esasy/`
-
-- [`vae_latent_compare_ep0_13s.gif`](milestones_preview/gifs%20for%20esasy/vae_latent_compare_ep0_13s.gif)
-- [`latest_resume555m_clip_002.gif`](milestones_preview/gifs%20for%20esasy/latest_resume555m_clip_002.gif)
 
 ## Papers
 
