@@ -5,9 +5,6 @@
 </p>
 
 <p align="center">
-  <a href="MA%27AT.pdf">Current Public Paper</a> ·
-  <a href="paper/MAAT_renewed_paper.pdf">Renewed Paper PDF</a> ·
-  <a href="paper/main.tex">Renewed Paper Source</a> ·
   <a href="https://youtu.be/WCvdq73E8tY">YouTube Presentation</a> ·
   <a href="milestones_preview/README.md">Milestones Bundle</a>
 </p>
